@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+set -eu
+
+./symlink_shared.sh
+
 if [ ! -e "$HOME/.config/awesome/rc.lua" ]
 then
   ln -s $PWD/config/ubuntu/awesome/rc.lua $HOME/.config/awesome/rc.lua

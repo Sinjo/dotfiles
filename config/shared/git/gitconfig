@@ -1,0 +1,25 @@
+[include]
+  path = ~/.git_author
+[color]
+  ui = true
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = /usr/bin/env vim
+[branch]
+  autosetuprebase = always
+[push]
+  default = simple
+[alias]
+  prune-local = !git branch --merged | tr -d '*' | grep -v dev | xargs -n1 git branch -d
+  dc = !clear && git diff --cached
+  d = diff
+  aa = add --all
+  ff = merge --ff-only
+  c = commit
+  co = checkout
+  cob = checkout -b
+  cm = commit -m
+  cam = commit -am
+  cp = cherry-pick
+  s = status
+  l = log --graph --oneline --decorate
