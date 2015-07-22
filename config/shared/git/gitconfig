@@ -17,9 +17,7 @@
   ff = merge --ff-only
   c = commit
   co = checkout
-  cob = checkout -b
   cm = commit -m
-  cam = commit -am
   cp = cherry-pick
   s = status
   l = log --graph --oneline --decorate
