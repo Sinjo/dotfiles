@@ -9,6 +9,8 @@
   autosetuprebase = always
 [push]
   default = simple
+[url "git@github.com:"]
+  insteadOf = https://github.com/
 [alias]
   prune-local = !git branch --merged | tr -d '*' | grep -v dev | xargs -n1 git branch -d
   dc = !clear && git diff --cached
