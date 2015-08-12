@@ -18,6 +18,7 @@
   aa = add --all
   ff = merge --ff-only
   c = commit
+  cam = commit --amend
   co = checkout
   cm = commit -m
   cp = cherry-pick
