@@ -1,0 +1,8 @@
+#/usr/bin/env bash
+
+# Evoluent VerticalMouse 4, remappings:
+#
+# 9 -> 2 (wheel-click acts as middle-click)
+# 8 -> 9 (lower thumb button acts as back)
+# 10 -> 8 (upper thumb button acts as forward)
+xinput set-button-map 12 1 2 3 4 5 6 7 9 2 8 11 12 13 14

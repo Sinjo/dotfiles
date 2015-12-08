@@ -11,3 +11,10 @@ then
 else
   echo "$HOME/.config/awesome/rc.lua already exists" >&2
 fi
+
+if [ ! -e "$HOME/.xsessionrc" ]
+then
+  ln -s $PWD/config/ubuntu/xorg/xsessionrc $HOME/.xsessionrc
+else
+  echo "$HOME/.xsessionrc already exists" >&2
+fi
