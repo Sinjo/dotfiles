@@ -5,7 +5,7 @@
 # 9 -> 2 (wheel-click acts as middle-click)
 # 8 -> 9 (lower thumb button acts as back)
 # 10 -> 8 (upper thumb button acts as forward)
-xinput set-button-map 12 1 2 3 4 5 6 7 9 2 8 11 12 13 14
+xinput --list | grep VerticalMouse | head -n1 | awk '{ print $6 }' | cut -d'=' -f2 | xargs -r -I{} xinput set-button-map {} 1 2 3 4 5 6 7 9 2 8 11 12 13 14
 
 # Dual-monitor setup
 xrandr --output DVI-D-0 --mode 2560x1440 --rotate normal --left-of DVI-I-1
