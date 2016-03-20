@@ -11,6 +11,14 @@ xinput --list | grep VerticalMouse | head -n1 | awk '{ print $6 }' | cut -d'=' -
 xrandr --output DVI-D-0 --mode 2560x1440 --rotate normal --left-of DVI-I-1
 xrandr --output DVI-I-1 --mode 1920x1200 --rotate left --right-of DVI-D-0
 
+# Start gnome-settings-daemon so we can configure gnome-terminal
+gnome-settings-daemon > /dev/null 2>&1 &
+
+# Disable annoying blinking cursor in gnome-terminal
+gsettings set org.gnome.desktop.interface cursor-blink false
+# Not turning this plugin off causes the mouse pointer to disappear because computers
+gsettings set org.gnome.settings-daemon.plugins.cursor active false
+
 # Use gnome-keyring-daemon to manage SSH keys
 eval $(gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
