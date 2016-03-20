@@ -12,9 +12,9 @@ else
   echo "$HOME/.config/awesome/rc.lua already exists" >&2
 fi
 
-if [ ! -e "$HOME/.xsessionrc" ]
+if [ ! -e "$HOME/.xprofile" ]
 then
-  ln -s $PWD/config/ubuntu/xorg/xsessionrc $HOME/.xsessionrc
+  ln -s $PWD/config/ubuntu/xorg/xprofile $HOME/.xprofile
 else
-  echo "$HOME/.xsessionrc already exists" >&2
+  echo "$HOME/.xprofile already exists" >&2
 fi
