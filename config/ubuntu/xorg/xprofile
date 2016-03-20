@@ -10,3 +10,9 @@ xinput --list | grep VerticalMouse | head -n1 | awk '{ print $6 }' | cut -d'=' -
 # Dual-monitor setup
 xrandr --output DVI-D-0 --mode 2560x1440 --rotate normal --left-of DVI-I-1
 xrandr --output DVI-I-1 --mode 1920x1200 --rotate left --right-of DVI-D-0
+
+# Use gnome-keyring-daemon to manage SSH keys
+eval $(gnome-keyring-daemon --start)
+export SSH_AUTH_SOCK
+export GNOME_KEYRING_PID
+export GNOME_KEYRING_CONTROL
