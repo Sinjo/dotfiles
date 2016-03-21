@@ -375,3 +375,7 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- Keep it British (set keyboard layout)
+-- I don't know what this races with, but the sleep "fixes" it
+os.execute("(sleep 2; setxkbmap -layout gb) &")
