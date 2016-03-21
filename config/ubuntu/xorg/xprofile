@@ -23,3 +23,7 @@ eval $(gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 export GNOME_KEYRING_PID
 export GNOME_KEYRING_CONTROL
+
+# Keep it British (set keyboard layout)
+# If this ever breaks, remember to disable/uninstall ibus
+setxkbmap -layout gb -option caps:escape
