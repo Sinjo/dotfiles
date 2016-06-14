@@ -12,7 +12,7 @@
 [url "git@github.com:"]
   insteadOf = https://github.com/
 [alias]
-  prune-local = !git branch --merged | tr -d '*' | grep -v master | xargs -n1 git branch -d
+  prune-local = !git branch --merged | tr -d '*' | grep -Ev '(master|dev)' | xargs -n1 git branch -d
   dc = !clear && git diff --cached
   d = diff
   aa = add --all
