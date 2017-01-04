@@ -1,1 +1,3 @@
-source $HOME/.bashrc
+[ -e $HOME/.profile ] && source $HOME/.profile
+[ -e $HOME/.bashrc ] && source $HOME/.bashrc
+[ -e $HOME/.bash_aliases ] && source $HOME/.bash_aliases

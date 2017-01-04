@@ -17,3 +17,10 @@ then
 else
   echo "$HOME/.bash_profile already exists" >&2
 fi
+
+if [ ! -e "$HOME/.bash_aliases" ]
+then
+  ln -s $PWD/config/os_x/bash/bash_aliases $HOME/.bash_aliases
+else
+  echo "$HOME/.bash_aliases already exists" >&2
+fi

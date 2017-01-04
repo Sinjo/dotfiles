@@ -1,0 +1,3 @@
+alias g=git
+alias diffocop="git diff origin/master --name-only | grep '\.rb$' | tr '\n' ' ' | xargs rubocop"
+alias bx="bundle exec"
