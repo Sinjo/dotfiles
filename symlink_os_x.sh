@@ -10,3 +10,10 @@ then
 else
   echo "$HOME/.bashrc already exists" >&2
 fi
+
+if [ ! -e "$HOME/.bash_profile" ]
+then
+  ln -s $PWD/config/os_x/bash/bash_profile $HOME/.bash_profile
+else
+  echo "$HOME/.bash_profile already exists" >&2
+fi
