@@ -22,3 +22,11 @@ then
 else
   echo "$HOME/.gitignore_global already exists" >&2
 fi
+
+if [ ! -e "$HOME/.bundle/config" ]
+then
+  mkdir -p $HOME/.bundle
+  ln -s $PWD/config/shared/bundler/config $HOME/.bundle/config
+else
+  echo "$HOME/.bundle/config already exists" >&2
+fi
