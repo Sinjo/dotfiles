@@ -3,6 +3,9 @@ export EDITOR=vim
 [ -e $HOME/.profile ] && source $HOME/.profile
 [ -e $HOME/.bashrc ] && source $HOME/.bashrc
 [ -e $HOME/.bash_aliases ] && source $HOME/.bash_aliases
+
+[ -e $HOME/.env_local ] && source $HOME/.env_local
+
 if command -v brew > /dev/null && [ -f $(brew --prefix)/etc/bash_completion ]; then
   source $(brew --prefix)/etc/bash_completion
 fi
