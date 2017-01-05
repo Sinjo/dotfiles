@@ -24,3 +24,10 @@ then
 else
   echo "$HOME/.bash_aliases already exists" >&2
 fi
+
+if [ ! -e "$HOME/.iterm" ]
+then
+  ln -s $PWD/config/os_x/iterm $HOME/.iterm
+else
+  echo "$HOME/.iterm already exists" >&2
+fi
