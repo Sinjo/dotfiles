@@ -31,3 +31,11 @@ then
 else
   echo "$HOME/.iterm already exists" >&2
 fi
+
+if [ ! -e "$HOME/Library/Colors/Sinjo.clr" ]
+then
+  mkdir -p $HOME/Library/Colors
+  ln -s $PWD/config/os_x/colors/Sinjo.clr $HOME/Library/Colors/Sinjo.clr
+else
+  echo "$HOME/Library/Colors/Sinjo.clr already exists" >&2
+fi
