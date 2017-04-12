@@ -17,7 +17,8 @@
   d = diff
   aa = add --all
   ff = merge --ff-only
-  c = commit
+  c = commit -v
+  commit = commit -v
   cam = commit --amend
   co = checkout
   cm = commit -m
