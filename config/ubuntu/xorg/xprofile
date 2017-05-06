@@ -8,7 +8,7 @@
 xinput --list | grep VerticalMouse | head -n1 | awk '{ print $6 }' | cut -d'=' -f2 | xargs -r -I{} xinput set-button-map {} 1 2 3 4 5 6 7 9 2 8 11 12 13 14
 
 # Dual-monitor setup
-xrandr --output DVI-D-0 --mode 2560x1440 --pos 0x336 --rotate normal --output DVI-I-1 --mode 1920x1200 --pos 2560x0 --rotate left
+xrandr --output DVI-I-1 --mode 2560x1440 --pos 0x336 --rotate normal --output DVI-D-0 --mode 1920x1200 --pos 2560x0 --rotate left
 
 # Start gnome-settings-daemon so we can configure gnome-terminal
 gnome-settings-daemon > /dev/null 2>&1 &
