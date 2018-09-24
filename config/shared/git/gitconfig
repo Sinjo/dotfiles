@@ -25,6 +25,7 @@
   cp = cherry-pick
   s = status
   l = log --graph --oneline --decorate
+  fwl = push --force-with-lease
 [pager]
   log = (type diff-highlight > /dev/null 2>&1 && diff-highlight | less -R) || less -R
   show = (type diff-highlight > /dev/null 2>&1 && diff-highlight | less -R) || less -R
