@@ -24,7 +24,5 @@ if [ $(uname) == 'Darwin' ]; then
   if [ -e "$HOME/.nvm" ]; then
     source /usr/local/opt/nvm/nvm.sh
     export NVM_DIR="$HOME/.nvm"
-  else
-    echo "$HOME/.nvm doesn't exist, not sourcing NVM" >&2
   fi
 fi
