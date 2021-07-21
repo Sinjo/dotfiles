@@ -1,3 +1,4 @@
+
 export EDITOR=vim
 
 [ -e $HOME/.profile ] && source $HOME/.profile
@@ -14,16 +15,16 @@ fi
 
 # OS X specific stuff
 if [ $(uname) == 'Darwin' ]; then
+  if [ -e "/opt/homebrew/bin" ]; then
+    export PATH="/opt/homebrew/bin:$PATH"
+    eval "$(brew shellenv)"
+  fi
+
   if command -v brew > /dev/null && [ -f $(brew --prefix)/etc/bash_completion ]; then
     source $(brew --prefix)/etc/bash_completion
   fi
   if command -v brew > /dev/null && [ -f $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc ]; then
     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
-  fi
-
-  if [ -e "/opt/homebrew/bin" ]; then
-    export PATH="/usr/local/bin:$PATH"
-    export PATH="/opt/homebrew/bin:$PATH"
   fi
 
   if [ -e "$HOME/.nvm" ]; then
