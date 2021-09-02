@@ -30,3 +30,24 @@ then
 else
   echo "$HOME/.bundle/config already exists" >&2
 fi
+
+if [ ! -e "$HOME/.bashrc" ]
+then
+  ln -s $PWD/config/shared/bash/bashrc $HOME/.bashrc
+else
+  echo "$HOME/.bashrc already exists" >&2
+fi
+
+if [ ! -e "$HOME/.bash_profile" ]
+then
+  ln -s $PWD/config/shared/bash/bash_profile $HOME/.bash_profile
+else
+  echo "$HOME/.bash_profile already exists" >&2
+fi
+
+if [ ! -e "$HOME/.bash_aliases" ]
+then
+  ln -s $PWD/config/shared/bash/bash_aliases $HOME/.bash_aliases
+else
+  echo "$HOME/.bash_aliases already exists" >&2
+fi
