@@ -27,8 +27,17 @@ if [ $(uname) == 'Darwin' ]; then
     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
   fi
 
-  if [ -e "$HOME/.nvm" ]; then
-    source /usr/local/opt/nvm/nvm.sh
-    export NVM_DIR="$HOME/.nvm"
-  fi
 fi
+
+if command -v pyenv > /dev/null ; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv init --path)"
+  eval "$(pyenv virtualenv-init -)"
+fi
+
+if [ -e "$HOME/.nvm" ]; then
+  source /usr/local/opt/nvm/nvm.sh
+  export NVM_DIR="$HOME/.nvm"
+fi
+
+[ -e $HOME/.bash_profile_local ] && source $HOME/.bash_profile_local
