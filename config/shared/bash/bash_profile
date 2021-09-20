@@ -29,6 +29,12 @@ if [ $(uname) == 'Darwin' ]; then
 
 fi
 
+if [ $(uname) == 'Linux' ]; then
+  if [ -e "/home/linuxbrew" ]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  fi
+fi
+
 if command -v pyenv > /dev/null ; then
   eval "$(pyenv init -)"
   eval "$(pyenv init --path)"
