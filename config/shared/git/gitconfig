@@ -1,5 +1,6 @@
 [include]
   path = ~/.git_author
+  path = ~/.gitconfig_local
 [color]
   ui = true
 [core]
