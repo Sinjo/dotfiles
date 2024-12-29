@@ -9,10 +9,6 @@ export EDITOR=vim
 [ -e $HOME/.env_local ] && source $HOME/.env_local
 [ -e $HOME/.env_unmanaged ] && source $HOME/.env_unmanaged
 
-if command -v rbenv > /dev/null; then
-  eval "$(rbenv init -)"
-fi
-
 # OS X specific stuff
 if [ $(uname) == 'Darwin' ]; then
   if [ -e "/opt/homebrew/bin" ]; then
@@ -33,6 +29,10 @@ if [ $(uname) == 'Linux' ]; then
   if [ -e "/home/linuxbrew" ]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   fi
+fi
+
+if command -v rbenv > /dev/null; then
+  eval "$(rbenv init -)"
 fi
 
 if command -v pyenv > /dev/null ; then
