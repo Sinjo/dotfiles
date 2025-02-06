@@ -51,3 +51,11 @@ then
 else
   echo "$HOME/.bash_aliases already exists" >&2
 fi
+
+if [ ! -e "$HOME/.config/kitty/kitty.conf" ]
+then
+  mkdir -p $HOME/.config/kitty/
+  ln -s $PWD/config/shared/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
+else
+  echo "$HOME/.config/kitty/kitty.conf already exists" >&2
+fi
