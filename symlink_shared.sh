@@ -59,3 +59,19 @@ then
 else
   echo "$HOME/.config/kitty/kitty.conf already exists" >&2
 fi
+
+if [ ! -e "$HOME/.config/kitty/macos.conf" ]
+then
+  mkdir -p $HOME/.config/kitty/
+  ln -s $PWD/config/shared/kitty/macos.conf $HOME/.config/kitty/macos.conf
+else
+  echo "$HOME/.config/kitty/macos.conf already exists" >&2
+fi
+
+if [ ! -e "$HOME/.config/kitty/linux.conf" ]
+then
+  mkdir -p $HOME/.config/kitty/
+  ln -s $PWD/config/shared/kitty/linux.conf $HOME/.config/kitty/linux.conf
+else
+  echo "$HOME/.config/kitty/linux.conf already exists" >&2
+fi

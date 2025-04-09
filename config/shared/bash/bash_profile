@@ -29,6 +29,8 @@ if [ $(uname) == 'Linux' ]; then
   if [ -e "/home/linuxbrew" ]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   fi
+
+  export PATH="$HOME/.local/bin:$PATH"
 fi
 
 if command -v rbenv > /dev/null; then
