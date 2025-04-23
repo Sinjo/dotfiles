@@ -46,9 +46,11 @@ if command -v pyenv > /dev/null ; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
-if [ -e "$HOME/.nvm" ]; then
+if [ -e "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ]; then
+  source /home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh
+fi
+if [ -e "/usr/local/opt/nvm/nvm.sh" ]; then
   source /usr/local/opt/nvm/nvm.sh
-  export NVM_DIR="$HOME/.nvm"
 fi
 
 [ -e $HOME/.bash_profile_local ] && source $HOME/.bash_profile_local
