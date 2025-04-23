@@ -29,6 +29,9 @@ if [ $(uname) == 'Linux' ]; then
   if [ -e "/home/linuxbrew" ]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   fi
+  if [ -e "/home/linuxbrew/.linuxbrew/opt/fzf/shell/key-bindings.bash" ]; then
+    source /home/linuxbrew/.linuxbrew/opt/fzf/shell/key-bindings.bash
+  fi
 
   export PATH="$HOME/.local/bin:$PATH"
 fi
