@@ -16,8 +16,8 @@ if [ $(uname) == 'Darwin' ]; then
     eval "$(brew shellenv)"
   fi
 
-  if command -v brew > /dev/null && [ -f $(brew --prefix)/etc/bash_completion ]; then
-    source $(brew --prefix)/etc/bash_completion
+  if command -v brew > /dev/null && [ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]; then
+    source "$(brew --prefix)/etc/profile.d/bash_completion.sh"
   fi
   if command -v brew > /dev/null && [ -f $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc ]; then
     source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
