@@ -28,9 +28,3 @@ defaults write com.apple.dock expose-animation-duration -float 0.12
 # Instant Dock auto-hide (only matters if you auto-hide the Dock)
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0.15
-
-##################################################
-# Turn off pointer acceleration on external mice #
-##################################################
-
-defaults write -g com.apple.mouse.linear -bool true
