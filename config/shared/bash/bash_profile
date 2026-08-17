@@ -13,6 +13,7 @@ export EDITOR=nvim
 if [ $(uname) == 'Darwin' ]; then
   if [ -e "/opt/homebrew/bin" ]; then
     export PATH="/opt/homebrew/bin:$PATH"
+    export PATH="/opt/homebrew/opt/mysql@8.4/bin:$PATH"
     eval "$(brew shellenv)"
   fi
 
