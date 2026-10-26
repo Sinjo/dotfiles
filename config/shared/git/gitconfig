@@ -32,3 +32,5 @@
   log = (type diff-highlight > /dev/null 2>&1 && diff-highlight | less -R) || less -R
   show = (type diff-highlight > /dev/null 2>&1 && diff-highlight | less -R) || less -R
   diff = (type diff-highlight > /dev/null 2>&1 && diff-highlight | less -R) || less -R
+[init]
+	defaultBranch = main
